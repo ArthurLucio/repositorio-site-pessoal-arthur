@@ -1,0 +1,21 @@
+<script>
+    // Função para adicionar a classe 'active' ao link da aba atual
+    function setActiveTab() {
+        // Obtém a URL atual
+        var currentUrl = window.location.href;
+        
+        // Obtém todos os links no menu de navegação
+        var navLinks = document.querySelectorAll('nav .botao');
+
+        // Itera sobre os links para encontrar o link correspondente à URL atual
+        navLinks.forEach(function(link) {
+            if (link.href === currentUrl) {
+                // Adiciona a classe 'active' ao link correspondente
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Chama a função quando o documento estiver totalmente carregado
+    document.addEventListener('DOMContentLoaded', setActiveTab);
+</script>
