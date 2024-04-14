@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/style.css" />
+  <title>Arthur Lúcio</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li class="botao">
+            <a href="/index.html">Home</a>
+          </li>
+          <li class="botao">
+            <a href="/content/sobre.html">Sobre mim</a>
+          </li>
+          <li class="botao">
+            <a href="/content/contato.html">Contato</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <img class="profile" src="/img/profile.jpg" alt="" />
+      </div>
+      <h1>Arthur Lúcio</h1>
+      <h2>Estudante do César</h2>
+    </header>
+
+    <main>
+      <section>
+        <h3>Introdução</h3>
+        <p>Este é meu site pessoal. Sinta-se à vontade para explorá-lo e conhecer mais sobre mim e acessar meus contatos.</p>
+      </section>
+    </main>
+
+    <footer class="homef">
+      <div class="footer">
+        <a href="https://github.com/ArthurLucio/repositorio-git-arthur" target="_blank" rel="noopener noreferrer">
+          <img class="icon" src="./img/git.png" alt="GitHub" />
+          <p>GitHub</p>
+        </a>
+        <a href="https://www.linkedin.com/in/arthur-lúcio-691072304/" target="_blank" rel="noopener noreferrer">
+          <img class="icon" src="img/linkedin.png" alt="LinkedIn" />
+          <p>LinkedIn</p>
+        </a>
+        <a href="https://www.instagram.com/_arthur_lucio/" target="_blank" rel="noopener noreferrer">
+          <img class="icon" src="img/insta.png" alt="Instagram" />
+          <p>Instagram</p>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function setActiveTab() {
+      var currentPath = window.location.pathname;
+      var navLinks = document.querySelectorAll('nav .botao a');
+
+      navLinks.forEach(function(link) {
+        var linkPath = link.getAttribute('href');
+        if (currentPath === linkPath) {
+          link.parentElement.classList.add('active');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', setActiveTab);
+  </script>
+</body>
+</html>
